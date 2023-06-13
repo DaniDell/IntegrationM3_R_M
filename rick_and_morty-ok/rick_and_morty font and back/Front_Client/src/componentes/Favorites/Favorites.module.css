@@ -1,0 +1,83 @@
+.Container {
+    height: 4rem;
+    text-align: right;  
+    display: grid;
+    grid-template: 3.3rem / 13% 85%;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+}
+
+.title {
+    text-align: right;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    font-family:  'Trebuchet MS', sans-serif;
+    grid-area: 1/1;
+    
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.selectContainer {
+    margin: 10px;
+    height: auto;
+    text-align: left;  
+    grid-area: 1/2;
+    justify-items: left;
+    
+}
+
+.title2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 12px;
+    margin: 8px;
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+    .container { 
+       justify-content: center;
+       font-size: 1rem;  
+        width: 100%;
+
+    }
+    
+    .title {
+        text-align: right;
+        font-size: 0.7rem;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        font-family:  'Trebuchet MS', sans-serif;
+        justify-content: center;
+    }
+    
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: transparent;
+    }
+    
+    .selectContainer {
+        margin: 0px;
+        height: 1.8rem;
+        text-align: left;  
+        justify-content: left;
+    }
+    
+    .title2 {
+        text-align:center;
+        font-size: 1.2rem;
+        margin-top: 0.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+  }

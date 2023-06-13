@@ -1,0 +1,86 @@
+.detail {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+.title {
+    grid-area: 1/2;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px;
+    font-family:  'Trebuchet MS', sans-serif;
+    
+}
+
+.titleT {
+    grid-area: 1/2;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px;
+    font-family:  'Trebuchet MS', sans-serif;
+    margin-right: 200px;
+    align-content: end;
+}
+
+.imgD {
+    grid-area: 1/1;
+    position: relative;
+    border-radius: 40px;
+    justify-items: center;
+    align-items: center;
+    margin-left: 200px;
+    box-shadow: 0 4px 0px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    }
+
+    @media (min-width: 200px) and (max-width: 700px) {
+        .detail { 
+           width:100%;
+           justify-content: center;
+           align-items: center;
+           font-size: 1rem;
+           grid-template: 1fr /100%;
+        }
+
+        .title {
+        
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            margin: 20px;
+            font-family:  'Trebuchet MS', sans-serif;
+            
+        }
+        
+        .titleT {
+            grid-area: 1/1;
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            margin: 10px;
+            font-family:  'Trebuchet MS', sans-serif;
+            margin-right: 200px;
+            align-content: end;
+        }
+        
+        .imgD {
+            grid-area: 1/1;
+            position: relative;
+            border-radius: 40px;
+            justify-items: center;
+            align-items: center;
+            margin-left: 170px;
+            box-shadow: 0 4px 0px 0 rgba(0,0,0,0.2);
+            text-align: center;
+            width: 12rem;
+            height: 12rem;
+            }
+
+
+      }
+    
