@@ -65,7 +65,7 @@ const login = (userData) => {
 
 
 const onClose = (id) => {
-  setCharacters(characters.filter((character) => character.id !== Number(id)))}
+  setCharacters(characters.filter((character) => Number(character.id) !== Number(id)))}
   
   return (
     <div className='container'>

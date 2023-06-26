@@ -25,7 +25,6 @@ function Card(props) {
     }
   };
 
-  
 
   return (
     <div className={style.container}>
