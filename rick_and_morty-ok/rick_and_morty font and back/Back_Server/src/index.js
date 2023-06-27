@@ -25,6 +25,7 @@ const PORT = 3001;
 const express = require("express");
 const router = require("./routes/index");
 const server = express();
+const morgan = require ("morgan")
 
 server.listen(PORT, () => {
   console.log(`Server on port ${PORT}`);
@@ -41,6 +42,9 @@ server.use((req, res, next) => {
 });
 
 server.use(express.json());
+
+server.use(morgan("dev"));
+
 server.use("/rickandmorty", router);
 
 
