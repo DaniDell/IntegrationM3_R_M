@@ -28,7 +28,7 @@ const Nav = (props) => {
         <button className={style.btn}>About the autor</button>
       </Link>
       
-      <button onClick={handleLogOut} className={style.btn}>LOG OUT the game</button>
+      <button onClick={handleLogOut} className={style.btn}>Close the game</button>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ function App () {
 
   useEffect(()=> {  !access && navigate('/')}, [access, navigate])
 
-
+/// lo dejo en promesas tradicional
   function onSearch(id) {
     axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
@@ -53,25 +53,20 @@ function App () {
 // }
 const login = async (userData) => {
 
-  try {const URL = "http://localhost:3001/rickandmorty/login/";
+  try {
+    const URL = "http://localhost:3001/rickandmorty/login/";
   const { email, password } = userData;
-  await axios(`${URL}?email=${email}&password=${password}`).then(({ data }) => {
+  const { data } = await axios(`${URL}?email=${email}&password=${password}`)
     const { access } = data;
     console.log(access, userData, data);
     setAccess(access);
     if (access === false) {
       // Usuario y contraseña no registrados
       alert('Username and password are not registered');
-    } else {access && navigate("/home");
-    }
-    
-  });
-    
+    } else {access && navigate("/home");}
+      
   } catch (error) {
-    
       alert('An error occurred. Please try again.');
-    
-    
   }
   
 };
