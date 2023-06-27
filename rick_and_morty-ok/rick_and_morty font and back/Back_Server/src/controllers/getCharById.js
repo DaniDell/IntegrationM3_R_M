@@ -34,7 +34,7 @@ try {
 };
 module.exports = getCharById;
 
-
+// CON PROMESAS TRADICIONAL
 // const getCharById = (req, res) => {
 //   const { id } = req.params;
 //   axios(`${URL}/${id}`)

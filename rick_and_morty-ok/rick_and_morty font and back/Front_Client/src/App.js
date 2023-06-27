@@ -51,15 +51,29 @@ function App () {
 //     navigate('/home')
 //   }
 // }
-const login = (userData) => {
-  const URL = "http://localhost:3001/rickandmorty/login/";
+const login = async (userData) => {
+
+  try {const URL = "http://localhost:3001/rickandmorty/login/";
   const { email, password } = userData;
-  axios(`${URL}?email=${email}&password=${password}`).then(({ data }) => {
+  await axios(`${URL}?email=${email}&password=${password}`).then(({ data }) => {
     const { access } = data;
     console.log(access, userData, data);
     setAccess(access);
-    access && navigate("/home");
+    if (access === false) {
+      // Usuario y contraseña no registrados
+      alert('Username and password are not registered');
+    } else {access && navigate("/home");
+    }
+    
   });
+    
+  } catch (error) {
+    
+      alert('An error occurred. Please try again.');
+    
+    
+  }
+  
 };
 
 
