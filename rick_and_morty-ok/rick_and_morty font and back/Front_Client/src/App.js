@@ -56,7 +56,7 @@ const login = (userData) => {
   const { email, password } = userData;
   axios(`${URL}?email=${email}&password=${password}`).then(({ data }) => {
     const { access } = data;
-    console.log(access);
+    console.log(access, userData, data);
     setAccess(access);
     access && navigate("/home");
   });
