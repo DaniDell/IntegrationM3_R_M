@@ -57,6 +57,7 @@ const Favorites = ({ myFavorites }) => {
             <option value="Human">Human</option>
             <option value="Humanoid">Humanoid</option>
             <option value="Robot">Robot</option>
+            <option value="Animal">Animal</option>
           </select>
         </div>
       </div>
