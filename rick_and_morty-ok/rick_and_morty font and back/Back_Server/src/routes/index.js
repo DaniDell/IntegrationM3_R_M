@@ -17,8 +17,8 @@ router.get("/login", login);
 router.post("/login", postUser);
 
 // Rutas de favoritos
-router.post("/fav", postFav);
-router.delete("/fav/:id", deleteFav);
+router.post("/favorites", postFav);
+router.delete("/favorites/:id", deleteFav);
 router.get("/favorites", getFavorites);
 
 

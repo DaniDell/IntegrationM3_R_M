@@ -48,15 +48,13 @@ wss.on("connection", (ws) => {
 app.use(errorHandler);
 
 // Start the server
-server.listen(PORT, async () => {
-  try {
-    await conn.sync({ force: true });
+conn.sync({ force: false }).then(() => {
+  server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
-  } catch (error) {
-    console.error("Error syncing database:", error);
-  }
+  });
+}).catch((error) => {
+  console.error("Error syncing database:", error);
 });
-
 
 
 

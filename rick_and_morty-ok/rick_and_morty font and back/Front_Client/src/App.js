@@ -45,52 +45,52 @@ function App() {
       });
   }
 
-  // const login = async (userData) => {
-  //   try {
-  //     const URL = 'http://localhost:3001/login/';
-  //     const { email, password } = userData;
-
-  //     const params = new URLSearchParams({
-  //       email: email,
-  //       password: password
-  //     }).toString();
-
-  //     const response = await fetch(`${URL}?${params}`);
-  //     const data = await response.json();
-
-  //     const { access } = data;
-  //     console.log(access, userData, data);
-  //     setAccess(access);
-
-  //     if (access === false) {
-  //       alert('Username and password are not registered');
-  //     } else {
-  //       access && navigate('/home');
-  //     }
-  //   } catch (error) {
-  //     alert('Problemas de integración');
-  //   }
-  // };
-
   const login = async (userData) => {
     try {
+      const URL = 'http://localhost:3001/rickandmorty/login/';
       const { email, password } = userData;
-      const hardcodedEmail = 'ddacqua@gmail.com';
-      const hardcodedPassword = '1234dani';
-  
-      if (email === hardcodedEmail && password === hardcodedPassword) {
-        // Las credenciales son válidas
-        setAccess(true);
-        navigate('/home');
-      } else {
-        // Las credenciales no son válidas
-        setAccess(false);
+
+      const params = new URLSearchParams({
+        email: email,
+        password: password
+      }).toString();
+
+      const response = await fetch(`${URL}?${params}`);
+      const data = await response.json();
+
+      const { access } = data;
+      console.log(access, userData, data);
+      setAccess(access);
+
+      if (access === false) {
         alert('Username and password are not registered');
+      } else {
+        access && navigate('/home');
       }
     } catch (error) {
-      alert('Problems with integration');
+      alert('Problemas de integración');
     }
   };
+
+  // const login = async (userData) => {
+  //   try {
+  //     const { email, password } = userData;
+  //     const hardcodedEmail = 'ddacqua@gmail.com';
+  //     const hardcodedPassword = '1234dani';
+  
+  //     if (email === hardcodedEmail && password === hardcodedPassword) {
+  //       // Las credenciales son válidas
+  //       setAccess(true);
+  //       navigate('/home');
+  //     } else {
+  //       // Las credenciales no son válidas
+  //       setAccess(false);
+  //       alert('Username and password are not registered');
+  //     }
+  //   } catch (error) {
+  //     alert('Problems with integration');
+  //   }
+  // };
   
   
   
